@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="calcApp">
+<head>
+    <title>Smart Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="calcController">
+
+    <div class="container">
+        <h2>Smart Calculator</h2>
+
+        <input type="number" ng-model="num1" placeholder="Enter first number">
+        <input type="number" ng-model="num2" placeholder="Enter second number">
+
+        <select ng-model="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+            <option value="power">^ (Power)</option>
+            <option value="mod">Modulus</option>
+        </select>
+
+        <button ng-click="calculate()">Calculate</button>
+
+        <h3>Result: {{ result }}</h3>
+    </div>
+
+</body>
+</html>
